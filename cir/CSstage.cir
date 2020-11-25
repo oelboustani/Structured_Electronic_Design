@@ -1,0 +1,10 @@
+"Active Antenna"
+* C:\Users\Ossama El Boustani\Workspace\Master Electrical Engineering\EE4109 Structured Electronic Design\CS_Stage_Assignment_1\cir\CSstage.asc
+R1 out 0 {R_L}
+XU1 out in 0 0 CMOS18N W={W} L={L} ID={ID}
+C1 N001 in {Cs}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+.param W=200u L=180n ID=10m R_L=50 Cs=1.5p
+.lib SLiCAP.lib
+.backanno
+.end
