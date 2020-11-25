@@ -1,0 +1,149 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"CS Drive Stage"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>CS Drive Stage</h1></div>
+<h2>Introduction</h2>
+<p>The active antenna is loaded with 50 $\Omega$ coaxial cable. Given a 1 dB compression level of 0 dBm at the output of the amplifier. This means an output power of 1 mW. Therefore, the output rms voltage is $V_o= \sqrt{P \cdot R_o} = \sqrt{1\;mW \cdot 50\;\Omega} = 0.2236\; V$. The output rms current is $I_o = V_o/R_o = 0.2236\; V / 50\;\Omega = 4.472\; mA$. From these values we get the peak voltage $V_p = \sqrt{2} \cdot 0.2236 = 316.2\; mV$ and the peak value of the current is $I_p = 6.324\; mA$. 
+ The biasing voltage $V_{DS}$ the biasing current $I_D$ should ensure the required peak voltage and current of the load .Furthermore, the antenna is modeled as voltage source with a capacitor in series.</p>
+<h2>SLiCAP Circuit diagram</h2>
+<h2>Netlist: CSstage.cir</h2>
+<pre>"Active Antenna"
+* C:\Users\Ossama El Boustani\Workspace\Master Electrical Engineering\EE4109 Structured Electronic Design\CS_Stage_Assignment_1\cir\CSstage.asc
+R1 out 0 {R_L}
+XU1 out in 0 0 CMOS18N W={W} L={L} ID={ID}
+C1 N001 in {Cs}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+.param W=200u L=180n ID=10m R_L=50 Cs=1.5p
+.lib SLiCAP.lib
+.backanno
+.end
+</pre>
+<figure><img src="img/CSstage.svg" alt="" style="width:600px">
+</figure>
+<h2>SLiCAP Circuit diagram</h2>
+<h2>Netlist: CSstage.cir</h2>
+<pre>"Active Antenna"
+* C:\Users\Ossama El Boustani\Workspace\Master Electrical Engineering\EE4109 Structured Electronic Design\CS_Stage_Assignment_1\cir\CSstage.asc
+R1 out 0 {R_L}
+XU1 out in 0 0 CMOS18N W={W} L={L} ID={ID}
+C1 N001 in {Cs}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+.param W=200u L=180n ID=10m R_L=50 Cs=1.5p
+.lib SLiCAP.lib
+.backanno
+.end
+</pre>
+<figure><img src="img/CSstage.svg" alt="" style="width:600px">
+</figure>
+<h2>LTSpice Circuit diagram</h2>
+<figure><img src="img/CSstage_Vs.svg" alt="" style="width:600px">
+</figure>
+<h2>Circuit parameters</h2>
+<p> The biasing sources are given some margin in comparison to the calculated values. $V_{DS} = 0.9\; V$ and $I_{DS} = 10\; mA$. To achieve an optimal aspect ratio $W/L$ without oversizing $W$, we choose the minimum length of the technology, $L = 180\; nm$. For this minimum length we have a critical inversion coefficient $IC_{CRIT} = 31.71$. To operate in strong inversion, the inversion coefficient $IC$ must be much larger than 1 but below $IC_{CRIT}$. 
+The inversion coefficient is given by: </p>
+\begin{equation}
+IC=\frac{I_{D} L}{I_{0} W}
+\end{equation}
+<p>From this equation we calculate the minimum and maximum width such that IC ranges from 1 up to $IC_{CRIT} = 31.71$. The minimum width, which corresponds to $IC = IC_{CRIT}$, is $W_{min} = 88 \;{\mu}m$ with $V_{GS} = 750 \;mV$ and the maximum width is$W_{max} = 2800\; {\mu}m$  which corresponds to $I_C = 1$, i.e. weak inversion with $V_{GS} = 400\;mV$.
+ To operate in strong inversion and keep the width as short as possible, we choose $IC =14$, which requires using $W = 200\; {\mu}m$. The resulting gate voltage obtaind with LTSpice is $V_{GS} = 737\; mV$ and the gate voltage obtained with SLiCAP is $V_{GS} = 620 \;mV$.</p>
+<h2>LTSpice Simulations</h2>
+<figure><img src="img/VoVin.svg" alt="" style="width:600px">
+</figure>
+<figure><img src="img/IoVin.svg" alt="" style="width:600px">
+</figure>
+<h2>Circuit Data</h2>
+<table><caption>Table: Element data of expanded netlist 'Active Antenna'</caption>
+<tr><th class="left">RefDes</th><th class="left">Nodes</th><th class="left">Refs</th><th class="left">Model</th><th class="left">Param</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">C1</td><td class = "left">N001 in </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$Cs$</td><td class="left">$1.5 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">Cdb_M1_XU1</td><td class = "left">out 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{db XU1}$</td><td class="left">$3.6 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">Cdg_M1_XU1</td><td class = "left">out in </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{dg XU1}$</td><td class="left">$6.0 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">Cgb_M1_XU1</td><td class = "left">in 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gb XU1}$</td><td class="left">$2.62 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">Cgs_M1_XU1</td><td class = "left">in 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gs XU1}$</td><td class="left">$2.621 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">Csb_M1_XU1</td><td class = "left">0 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{sb XU1}$</td><td class="left">$3.6 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">Gb_M1_XU1</td><td class = "left">out 0 0 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{b XU1}$</td><td class="left">$0.02069$</td></tr>
+<tr><td class="left">Gm_M1_XU1</td><td class = "left">out 0 in 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{m XU1}$</td><td class="left">$0.05912$</td></tr>
+<tr><td class="left">Go_M1_XU1</td><td class = "left">out 0 out 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{o XU1}$</td><td class="left">$0.001389$</td></tr>
+<tr><td class="left">R1</td><td class = "left">out 0 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{L}$</td><td class="left">$50.0$</td></tr>
+<tr><td class="left">V1</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dc</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+</table>
+<table><caption>Table: Parameter definitions in 'Active Antenna'.</caption>
+<tr><th class="left">Name</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">$CGBO_{N18}$</td><td class="left">$1.0 \cdot 10^{-12}$</td><td class="left">$1.0 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$CGSO_{N18}$</td><td class="left">$3.0 \cdot 10^{-10}$</td><td class="left">$3.0 \cdot 10^{-10}$</td></tr>
+<tr><td class="left">$CJB_{0 N18}$</td><td class="left">$0.001$</td><td class="left">$0.001$</td></tr>
+<tr><td class="left">$C_{OX N18}$</td><td class="left">$\frac{\epsilon_{0} \epsilon_{SiO2}}{TOX_{N18}}$</td><td class="left">$0.008422$</td></tr>
+<tr><td class="left">$Cs$</td><td class="left">$1.5 \cdot 10^{-12}$</td><td class="left">$1.5 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$E_{CRIT N18}$</td><td class="left">$5.6 \cdot 10^{6}$</td><td class="left">$5.6 \cdot 10^{6}$</td></tr>
+<tr><td class="left">$ID$</td><td class="left">$0.01$</td><td class="left">$0.01$</td></tr>
+<tr><td class="left">$I_{0 N18}$</td><td class="left">$2 C_{OX N18} N_{s N18} U_{T}^{2} u_{0 N18}$</td><td class="left">$6.413 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$L$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$LDS_{N18}$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$N_{s N18}$</td><td class="left">$1.35$</td><td class="left">$1.35$</td></tr>
+<tr><td class="left">$R_{L}$</td><td class="left">$50$</td><td class="left">$50.0$</td></tr>
+<tr><td class="left">$T$</td><td class="left">$300$</td><td class="left">$300.0$</td></tr>
+<tr><td class="left">$TOX_{N18}$</td><td class="left">$4.1 \cdot 10^{-9}$</td><td class="left">$4.1 \cdot 10^{-9}$</td></tr>
+<tr><td class="left">$\Theta_{N18}$</td><td class="left">$0.28$</td><td class="left">$0.28$</td></tr>
+<tr><td class="left">$U_{T}$</td><td class="left">$\frac{T k}{q}$</td><td class="left">$0.02585$</td></tr>
+<tr><td class="left">$VAL_{N18}$</td><td class="left">$4.0 \cdot 10^{7}$</td><td class="left">$4.0 \cdot 10^{7}$</td></tr>
+<tr><td class="left">$Vth_{N18}$</td><td class="left">$0.36$</td><td class="left">$0.36$</td></tr>
+<tr><td class="left">$W$</td><td class="left">$0.0002005$</td><td class="left">$0.0002005$</td></tr>
+<tr><td class="left">$c$</td><td class="left">$2.998 \cdot 10^{8}$</td><td class="left">$2.998 \cdot 10^{8}$</td></tr>
+<tr><td class="left">$\epsilon_{0}$</td><td class="left">$\frac{1}{c^{2} \mu_{0}}$</td><td class="left">$8.854 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$\epsilon_{SiO2}$</td><td class="left">$3.9$</td><td class="left">$3.9$</td></tr>
+<tr><td class="left">$k$</td><td class="left">$1.381 \cdot 10^{-23}$</td><td class="left">$1.381 \cdot 10^{-23}$</td></tr>
+<tr><td class="left">$\mu_{0}$</td><td class="left">$4.0 \cdot 10^{-7} \pi$</td><td class="left">$1.257 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$q$</td><td class="left">$1.602 \cdot 10^{-19}$</td><td class="left">$1.602 \cdot 10^{-19}$</td></tr>
+<tr><td class="left">$u_{0 N18}$</td><td class="left">$0.0422$</td><td class="left">$0.0422$</td></tr>
+<tr><td class="left">$IC_{CRIT XU1}$</td><td class="left">$\frac{1}{16 N_{s N18}^{2} U_{T}^{2} \left(\Theta_{N18} + \frac{1}{E_{CRIT N18} L}\right)^{2}}$</td><td class="left">$31.71$</td></tr>
+<tr><td class="left">$IC_{XU1}$</td><td class="left">$\frac{ID L}{I_{0 N18} W}$</td><td class="left">$14.0$</td></tr>
+<tr><td class="left">$V_{GS XU1}$</td><td class="left">$2 N_{s N18} U_{T} \log{\left(e^{\sqrt{IC_{XU1}}} - 1 \right)} + Vth_{N18}$</td><td class="left">$0.6195$</td></tr>
+<tr><td class="left">$c_{db XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W$</td><td class="left">$3.609 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">$c_{dg XU1}$</td><td class="left">$CGSO_{N18} W$</td><td class="left">$6.015 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">$c_{gb XU1}$</td><td class="left">$2 CGBO_{N18} L + \frac{C_{OX N18} L W \left(N_{s N18} - 1\right)}{3 N_{s N18}}$</td><td class="left">$2.627 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">$c_{gs XU1}$</td><td class="left">$CGSO_{N18} W + \frac{2 C_{OX N18} L W}{3}$</td><td class="left">$2.628 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">$c_{iss XU1}$</td><td class="left">$c_{dg XU1} + c_{gb XU1} + c_{gs XU1}$</td><td class="left">$3.492 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">$c_{sb XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W$</td><td class="left">$3.609 \cdot 10^{-14}$</td></tr>
+<tr><td class="left">$f_{T XU1}$</td><td class="left">$\frac{g_{m XU1}}{2 \pi c_{iss XU1}}$</td><td class="left">$2.698 \cdot 10^{10}$</td></tr>
+<tr><td class="left">$g_{b XU1}$</td><td class="left">$g_{m XU1} \left(N_{s N18} - 1\right)$</td><td class="left">$0.02072$</td></tr>
+<tr><td class="left">$g_{m XU1}$</td><td class="left">$\frac{ID}{N_{s N18} U_{T} \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right) + 0.5 \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right)} + 1}}$</td><td class="left">$0.0592$</td></tr>
+<tr><td class="left">$g_{o XU1}$</td><td class="left">$\frac{ID}{L VAL_{N18}}$</td><td class="left">$0.001389$</td></tr>
+</table>
+<h2>CS stage small-signal dynamic behavior</h2>
+<h2>CS stage small-signal dynamic behavior</h2>
+<h2>Transfer function numeric expression</h2>
+\begin{equation}
+Z_{t}=\frac{2.093 \cdot 10^{-12} s^{2} - 2.06 s}{4.044 \cdot 10^{-12} s^{2} + s}
+\end{equation}
+<h2>Bode plots</h2>
+<figure><img src="img/dBmagZt.svg.svg" alt="" style="width:600px">
+</figure>
+<figure><img src="img/phaseZt.svg.svg" alt="" style="width:600px">
+</figure>
+<h2>Conclusion</h2>
+<p>From the voltage transfer and voltage to curent transfer characteristics, we can conclude that the output voltage and current pass through the origin. From the voltage transfer characteristic,we can see that the output voltage is approximately linear for $-200 \; (mV) \; \leq V_{in} \leq 200 \; (mV)$. From $Io(Vi)$ characteristic, the output current is approximately linear when $-100\; (mV)\; \leq V_{in} \leq 100\; (mV)$. Finally, we conclude that the output stage can be realized in 180 nm CMOS technology.</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Active-Antenna_index.html">Active-Antenna_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-11-25 21:20:09</p>
+</div></body></html>
