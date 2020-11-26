@@ -1,4 +1,4 @@
-"Active Antenna"
+"Drive stage"
 * C:\Users\Ossama El Boustani\Workspace\Master Electrical Engineering\EE4109 Structured Electronic Design\CS_Stage_Assignment_1\cir\CSstage.asc
 R1 out 0 {R_L}
 XU1 out in 0 0 CMOS18N W={W} L={L} ID={ID}

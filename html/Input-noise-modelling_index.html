@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Input noise modelling"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Input noise modelling</h1></div>
+<h2>Table of contents</h2><ol><p>The input stage will dominate the noise performance of the amplifier, since the input-reffered noise contributions of the other stages are divided by its gain. The goal of this page is to find showstopper values for its characteristics based on the input-reffered noise. To this end, we consider a simple input-reffered noise model:</p>
+<figure><img src="img/NoiseModel.svg" alt="" style="width:800px">
+</figure>
+<h2>Netlist: NoiseModel.net</h2>
+<pre>"Input noise modelling"
+* /Users/arthuradmiraal/Documents/TU Delft/Master/StructuredElectronicsDesign/AntennaAssignment/NoiseModel.asc
+Vant N001 0 {V_ant}
+Cant N002 N001 {C_ant}
+XU1 N002 0 Vout NM18_noise ID={I_D} IG={I_G} W={W} L={L}
+.param V_ant=0 C_ant=1.5p I_G=0
+.lib SLiCAP.lib
+.backanno
+.end</pre>
+<table><caption>Table: Element data of expanded netlist 'Input noise modelling'</caption>
+<tr><th class="left">RefDes</th><th class="left">Nodes</th><th class="left">Refs</th><th class="left">Model</th><th class="left">Param</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">Cant</td><td class = "left">N002 N001 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{ant}$</td><td class="left">$1.5 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">F1_XU1</td><td class = "left">N002 0 10_XU1 0 </td><td class = "left"></td><td class = "left">F</td>
+<td class="left">value</td><td class="left">$\frac{s}{2 \pi f_{T XU1}}$</td><td class="left">$\frac{43.58 s \left(0.006343 L W + 2.0 \cdot 10^{-12} L + 6.0 \cdot 10^{-10} W\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}{I_{D}}$</td></tr>
+<tr><td class="left">H1_XU1</td><td class = "left">N002 Vout 1_XU1 10_XU1 </td><td class = "left"></td><td class = "left">H</td>
+<td class="left">value</td><td class="left">$\frac{1}{g_{m XU1}}$</td><td class="left">$\frac{43.58 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}{I_{D}}$</td></tr>
+<tr><td class="left">I1_XU1</td><td class = "left">0 1_XU1 </td><td class = "left"></td><td class = "left">I</td>
+<td class="left">value</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$\frac{4 T_{XU1} k_{XU1} \left(1 + \frac{f_{\ell XU1}}{f}\right)}{R_{N XU1}}$</td><td class="left">$\frac{0.1239 I_{D} T_{XU1} k_{XU1} \left(\frac{1.039 \cdot 10^{6} I_{D} L}{W} + 0.5\right) \left(\frac{2.36 \cdot 10^{-19} I_{D} \left(\frac{1.559 \cdot 10^{6} I_{D} L}{W} + 1\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}{L T_{XU1} W f k_{XU1} \left(\frac{1.039 \cdot 10^{6} I_{D} L}{W} + 0.5\right) \left(\frac{1.559 \cdot 10^{6} I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 624.3 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 1\right)} + 1\right)}{\left(\frac{1.559 \cdot 10^{6} I_{D} L}{W} + 1\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">I2_XU1</td><td class = "left">N002 0 </td><td class = "left"></td><td class = "left">I</td>
+<td class="left">value</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$2 I_{G} q_{XU1}$</td><td class="left">$0$</td></tr>
+<tr><td class="left">Vant</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$V_{ant}$</td><td class="left">$0$</td></tr>
+</table>
+<table><caption>Table: Parameter definitions in 'Input noise modelling'.</caption>
+<tr><th class="left">Name</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">$CGBO_{N18}$</td><td class="left">$1.0 \cdot 10^{-12}$</td><td class="left">$1.0 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$CGSO_{N18}$</td><td class="left">$3.0 \cdot 10^{-10}$</td><td class="left">$3.0 \cdot 10^{-10}$</td></tr>
+<tr><td class="left">$CJB_{0 N18}$</td><td class="left">$0.001$</td><td class="left">$0.001$</td></tr>
+<tr><td class="left">$C_{OX N18}$</td><td class="left">$\frac{\epsilon_{0} \epsilon_{SiO2}}{TOX_{N18}}$</td><td class="left">$0.008422$</td></tr>
+<tr><td class="left">$C_{ant}$</td><td class="left">$1.5 \cdot 10^{-12}$</td><td class="left">$1.5 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$E_{CRIT N18}$</td><td class="left">$5.6 \cdot 10^{6}$</td><td class="left">$5.6 \cdot 10^{6}$</td></tr>
+<tr><td class="left">$I_{0 N18}$</td><td class="left">$2 C_{OX N18} N_{s N18} U_{T}^{2} u_{0 N18}$</td><td class="left">$6.413 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$I_{G}$</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">$KF_{N18}$</td><td class="left">$3.0 \cdot 10^{-25}$</td><td class="left">$3.0 \cdot 10^{-25}$</td></tr>
+<tr><td class="left">$LDS_{N18}$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$N_{s N18}$</td><td class="left">$1.35$</td><td class="left">$1.35$</td></tr>
+<tr><td class="left">$T$</td><td class="left">$300$</td><td class="left">$300.0$</td></tr>
+<tr><td class="left">$TOX_{N18}$</td><td class="left">$4.1 \cdot 10^{-9}$</td><td class="left">$4.1 \cdot 10^{-9}$</td></tr>
+<tr><td class="left">$\Theta_{N18}$</td><td class="left">$0.28$</td><td class="left">$0.28$</td></tr>
+<tr><td class="left">$U_{T}$</td><td class="left">$\frac{T k}{q}$</td><td class="left">$0.02585$</td></tr>
+<tr><td class="left">$V_{ant}$</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">$c$</td><td class="left">$2.998 \cdot 10^{8}$</td><td class="left">$2.998 \cdot 10^{8}$</td></tr>
+<tr><td class="left">$\epsilon_{0}$</td><td class="left">$\frac{1}{c^{2} \mu_{0}}$</td><td class="left">$8.854 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$\epsilon_{SiO2}$</td><td class="left">$3.9$</td><td class="left">$3.9$</td></tr>
+<tr><td class="left">$k$</td><td class="left">$1.381 \cdot 10^{-23}$</td><td class="left">$1.381 \cdot 10^{-23}$</td></tr>
+<tr><td class="left">$\mu_{0}$</td><td class="left">$4.0 \cdot 10^{-7} \pi$</td><td class="left">$1.257 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$q$</td><td class="left">$1.602 \cdot 10^{-19}$</td><td class="left">$1.602 \cdot 10^{-19}$</td></tr>
+<tr><td class="left">$u_{0 N18}$</td><td class="left">$0.0422$</td><td class="left">$0.0422$</td></tr>
+<tr><td class="left">$IC_{CRIT XU1}$</td><td class="left">$\frac{1}{16 N_{s N18}^{2} U_{T}^{2} \left(\Theta_{N18} + \frac{1}{E_{CRIT N18} L}\right)^{2}}$</td><td class="left">$\frac{654.5}{\left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}$</td></tr>
+<tr><td class="left">$IC_{XU1}$</td><td class="left">$\frac{I_{D} L}{I_{0 N18} W}$</td><td class="left">$\frac{1.559 \cdot 10^{6} I_{D} L}{W}$</td></tr>
+<tr><td class="left">$R_{N XU1}$</td><td class="left">$\frac{IC_{XU1} + 1}{N_{s N18} g_{m XU1} \left(\frac{2 IC_{XU1}}{3} + \frac{1}{2}\right)}$</td><td class="left">$\frac{32.28 \left(\frac{1.559 \cdot 10^{6} I_{D} L}{W} + 1\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}{I_{D} \left(\frac{1.039 \cdot 10^{6} I_{D} L}{W} + 0.5\right)}$</td></tr>
+<tr><td class="left">$c_{db XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W$</td><td class="left">$1.8 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{dg XU1}$</td><td class="left">$CGSO_{N18} W$</td><td class="left">$3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{gb XU1}$</td><td class="left">$2 CGBO_{N18} L + \frac{C_{OX N18} L W \left(N_{s N18} - 1\right)}{3 N_{s N18}}$</td><td class="left">$0.0007279 L W + 2.0 \cdot 10^{-12} L$</td></tr>
+<tr><td class="left">$c_{gs XU1}$</td><td class="left">$CGSO_{N18} W + \frac{2 C_{OX N18} L W}{3}$</td><td class="left">$0.005615 L W + 3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{iss XU1}$</td><td class="left">$c_{dg XU1} + c_{gb XU1} + c_{gs XU1}$</td><td class="left">$0.006343 L W + 2.0 \cdot 10^{-12} L + 6.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$f_{T XU1}$</td><td class="left">$\frac{g_{m XU1}}{2 \pi c_{iss XU1}}$</td><td class="left">$\frac{0.003652 I_{D}}{\left(0.006343 L W + 2.0 \cdot 10^{-12} L + 6.0 \cdot 10^{-10} W\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">$f_{\ell XU1}$</td><td class="left">$\frac{KF_{N18} R_{N XU1} g_{m XU1}^{2}}{4 C_{OX N18} L T_{XU1} W k_{XU1}}$</td><td class="left">$\frac{2.36 \cdot 10^{-19} I_{D} \left(\frac{1.559 \cdot 10^{6} I_{D} L}{W} + 1\right) \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}{L T_{XU1} W k_{XU1} \left(\frac{1.039 \cdot 10^{6} I_{D} L}{W} + 0.5\right) \left(\frac{1.559 \cdot 10^{6} I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 624.3 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 1\right)}$</td></tr>
+<tr><td class="left">$g_{m XU1}$</td><td class="left">$\frac{I_{D}}{N_{s N18} U_{T} \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right) + 0.5 \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right)} + 1}}$</td><td class="left">$\frac{0.02295 I_{D}}{\left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{D} L \left(\frac{2382.0 I_{D} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+</table>
+<table><caption>Table: Parameters without definition in 'Input noise modelling.</caption>
+
+<tr><th class="left">Name</th></tr>
+<tr><td class="left">$q_{XU1}$</td></tr>
+<tr><td class="left">$L$</td></tr>
+<tr><td class="left">$k_{XU1}$</td></tr>
+</table>
+<h2>Symbolic noise analysis results</h2>
+<h3>Detector-referred noise spectrum</h3>
+$$S_{out}=\frac{I_{G} q_{XU1}}{2 \pi^{2} C_{ant}^{2} f^{2}} + \frac{T_{XU1} k_{XU1} \left(f + f_{\ell XU1}\right) \left|{\frac{f \left(2 \pi C_{ant} f_{T XU1} + g_{m XU1}\right)}{g_{m XU1}}}\right|^{2}}{\pi^{2} C_{ant}^{2} R_{N XU1} f^{3} f_{T XU1}^{2}}\, \mathrm{\left[\frac{V^2}{Hz}\right]}$$
+<h3>Source-referred noise spectrum</h3>
+$$S_{in}=\frac{0.5 I_{G} q_{XU1}}{\pi^{2} C_{ant}^{2} f^{2}} + \frac{T_{XU1} k_{XU1} \left(f + f_{\ell XU1}\right) \left|{\frac{f \left(2 \pi C_{ant} f_{T XU1} + g_{m XU1}\right)}{g_{m XU1}}}\right|^{2}}{\pi^{2} C_{ant}^{2} R_{N XU1} f^{3} f_{T XU1}^{2}}\, \mathrm{\left[\frac{V^2}{Hz}\right]}$$
+<h3>Contributions of individual noise sources</h3><table>
+<th colspan = "3" class="center">Noise source: I1_XU1</th><tr><td class="title">Spectral density:</td><td>$\frac{4 T_{XU1} k_{XU1} \left(1 + \frac{f_{\ell XU1}}{f}\right)}{R_{N XU1}}$</td><td class="units">$\,\mathrm{\left[\frac{A^2}{Hz}\right]}$</td></tr>
+<tr><td class="title">Detector-referred:</td><td>$\frac{T_{XU1} k_{XU1} \left(f + f_{\ell XU1}\right) \left|{\frac{f \left(2 \pi C_{ant} f_{T XU1} + g_{m XU1}\right)}{g_{m XU1}}}\right|^{2}}{\pi^{2} C_{ant}^{2} R_{N XU1} f^{3} f_{T XU1}^{2}}$</td><td class="units">$\,\mathrm{\left[\frac{V^2}{Hz}\right]}$</td></tr>
+<tr><td class="title">Source-referred:</td><td>$\frac{T_{XU1} k_{XU1} \left(f + f_{\ell XU1}\right) \left|{\frac{f \left(2 \pi C_{ant} f_{T XU1} + g_{m XU1}\right)}{g_{m XU1}}}\right|^{2}}{\pi^{2} C_{ant}^{2} R_{N XU1} f^{3} f_{T XU1}^{2}}$</td><td class="units">$\,\mathrm{\left[\frac{V^2}{Hz}\right]}$</td></tr>
+<th colspan = "3" class="center">Noise source: I2_XU1</th><tr><td class="title">Spectral density:</td><td>$2 I_{G} q_{XU1}$</td><td class="units">$\,\mathrm{\left[\frac{A^2}{Hz}\right]}$</td></tr>
+<tr><td class="title">Detector-referred:</td><td>$\frac{I_{G} q_{XU1}}{2 \pi^{2} C_{ant}^{2} f^{2}}$</td><td class="units">$\,\mathrm{\left[\frac{V^2}{Hz}\right]}$</td></tr>
+<tr><td class="title">Source-referred:</td><td>$\frac{0.5 I_{G} q_{XU1}}{\pi^{2} C_{ant}^{2} f^{2}}$</td><td class="units">$\,\mathrm{\left[\frac{V^2}{Hz}\right]}$</td></tr>
+</table>
+<h2>Towards design equations</h2>
+<p>In section, we use the symbolic equations of the noise model to establish necessary conditions for the input transistor. To this end, we'll start by some manipulation of the input-reffered noise PSD:</p>
+<p>Which can be restated as:</p>
+\begin{equation}
+S_{av}=\frac{0.3333 N_{s N18} T k \left(C_{ant} + c_{iss XU1}\right)^{2} \left(4 IC_{XU1} + 3\right) \left(\alpha f_{T XU1} + f\right)}{\pi C_{ant}^{2} c_{iss XU1} f f_{T XU1} \left(IC_{XU1} + 1\right)}
+\end{equation}
+<p>In which:</p>
+\begin{equation}
+\alpha=\frac{3 \pi KF_{N18} \eta \left(IC_{XU1} + 1\right)}{N_{s N18} T_{XU1} k_{XU1} \left(4 IC_{XU1} + 3\right)}
+\end{equation}
+<p>With:</p>
+\begin{equation}
+\eta=\frac{c_{iss XU1}}{C_{OX N18} L W}
+\end{equation}
+<p>$\eta$ is not fully dependent on the dimensions. It can be expressed as:</p>
+\begin{equation}
+\eta=\frac{75.59 \pi CGBO_{N18}}{W} + \frac{75.59 \pi CGSO_{N18}}{L} + 37.79 \pi C_{OX N18} - \frac{12.6 \pi C_{OX N18}}{N_{s N18}} > \frac{37.79 \pi C_{OX N18} N_{s N18} - 12.6 \pi C_{OX N18}}{N_{s N18}}
+\end{equation}
+<p>Using this $\eta=\eta_0$, an lower bound for the noise is obtained:</p>
+\begin{equation}
+S_{av}=\frac{0.3333 N_{s N18} T k \left(C_{ant} + c_{iss XU1}\right)^{2} \left(4 IC_{XU1} + 3\right) \left(\alpha f_{T XU1} + f\right)}{\pi C_{ant}^{2} c_{iss XU1} f f_{T XU1} \left(IC_{XU1} + 1\right)}
+\end{equation}
+<p>There is an optimum value for $c_{issXU1}=C_{ant}$. Then the minimum noise is:</p>
+\begin{equation}
+S_{av}=\frac{1.333 N_{s N18} T k \left(4 IC_{XU1} + 3\right) \left(\alpha f_{T XU1} + f\right)}{\pi C_{ant} f f_{T XU1} \left(IC_{XU1} + 1\right)}
+\end{equation}
+<h3>Noise requirements</h3>
+<p>The required noise envelope can be decomposed in two components: a frequency-independent white thermal noise component and a frequency-dependent red noise component. The noise model also has a frequency-indepedent and a frequency-dependent component. If either of these components is higher than the associated noise envelope component, the circuit won't meet the specifications. Hence, we can separate these out.</p>
+<p>From the specifications, the thermal noise should not exceed $8.1e-19\,\mathrm{W}\mathrm{Hz}^{-1}$ and the multiplier of the $1/f$ noise should not exceed $3.2400000000000003e-13\,\mathrm{W}\mathrm{Hz}^{-1}$.</p>
+<h3>Isolating the components</h3>
+$S_{av thermal} > \frac{5.333 N_{s N18} T k \left(IC_{XU1} + 0.75\right)}{\pi C_{ant} f_{T XU1} \left(IC_{XU1} + 1\right)}$<p></p>
+$S_{av pink} > \frac{5.333 N_{s N18} T \alpha k \left(IC_{XU1} + 0.75\right)}{\pi C_{ant} f \left(IC_{XU1} + 1\right)}$<h3>Showstopper equations</h3>
+<p>$$S_{av pink} f>\frac{4.0 KF_{N18} T \eta k}{C_{ant} T_{XU1} f k_{XU1}}=\frac{2.49539436207407 \cdot 10^{-33}}{T_{XU1} k_{XU1}}<3.24 \cdot 10^{-13}$$</p>
+\begin{equation}
+S_{av thermal} > \frac{5.333 N_{s N18} T k \left(IC_{XU1} + 0.75\right)}{\pi C_{ant} f_{T XU1} \left(IC_{XU1} + 1\right)}=\frac{4.746 \cdot 10^{-9}}{f_{T XU1}} < 8.1 \cdot 10^{-19}
+\end{equation}
+<p>From the thermal noise PSD, we find:</p>
+<p>$$ f_{TXU1} > 5.85965431014692\,\mathrm{GHz}$$</p>
+<p>However, the minimum $1/f$ is already higher than the maximum $1/f$ noise, which is a showstopper. Hence, this application cannot be fulfilled in this process without transformers or frequency shifts.</p>
+<!-- INSERT --></ol>
+<div id="footnote">
+<p>Go to <a href="index.html">index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-11-26 14:44:10</p>
+</div></body></html>

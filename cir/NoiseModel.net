@@ -1,0 +1,9 @@
+"Input noise modelling"
+* /Users/arthuradmiraal/Documents/TU Delft/Master/StructuredElectronicsDesign/AntennaAssignment/NoiseModel.asc
+Vant N001 0 {V_ant}
+Cant N002 N001 {C_ant}
+XU1 N002 0 Vout NM18_noise ID={I_D} IG={I_G} W={W} L={L}
+.param V_ant=0 C_ant=1.5p I_G=0
+.lib SLiCAP.lib
+.backanno
+.end
