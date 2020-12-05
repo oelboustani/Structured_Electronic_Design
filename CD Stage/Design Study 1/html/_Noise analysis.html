@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" /> <meta name="Language" content="English"/><title>Noise analysis</title><link rel="stylesheet" href="css/slicap.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script> <script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: {equationNumbers: {autoNumber: "all"}}});</script><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script></head><body><div id="top"><h1>Noise analysis</h1></div>
+<p>First we observe the noise performance of the circuit. To this end we choose the length of the antenna as long as possible which aids in enlargening the source capacitance and lowers the requirement for the voltage to voltage gain of the amplifier.</p>
+<p>This fixes: $l=0.5 m$.</p>
+<p>We can deduce from the noise spectrum that there is an optimum for the noise when $C_{iss}=C_s$</p>
+<p>This leads to an optimum for the area of the transistor that is solely dependant on this parameter and technology parameters.</p>
+<p>This leads to: $W*L=7.8*10^{-10} m^2$.</p>
+<p>Now we can use the noise floor to find the a minimum value for $gm$. This depends weakly on the operating region, natural constants, temperature and the length of the antenna. Given the later requirement of drive capability it seems prudent assume saturation here. The temperature is fixed at 300K at this point. Should the design prove otherwise feasible we will come back to simulating the extremes of the operating temperature.</p>
+<p>The minimuum for $gm$ comes out to $7 mS$</p>
+<p>The relationship between the bandwidth ($gm/pi*2*C_{iss}$) further determines an upper limit for $gm$ at the given $C_{iss}$ to maintain a 1/f-corner frequency below 100 kHz.</p>
+<p>This can be found to be roughly $25 mS$. Given this and setting $L$ to the lowest possible value for the technology, $180 nm$ we find a full definition for $W$, $L$, and $I_{DS}$.</p>
+<p>It turns out that the current in this case is far too low to support saturation. As such we scale up $I_{DS}$ while maintaing area and $gm$.</p>
+<p>Through this iterative process we find a set of values that makes the requirements: $W=860um$, $L=900nm$, $I_{DS}=12mA$</p>
+<figure><img src="figures/noise.png" width="1024"/></figure>
+<div id="footnote"><p>Go to <a href="index.html"> main index</a></p><p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 0.6 &copy 2009-2020 Anton Montagne</p><p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p></div></body></html>
