@@ -1,0 +1,10 @@
+"Noise Analysis"
+* C:\Users\maboa\Desktop\Structured Electronic Design\Structured_Electronic_Design\Balanced single loop feedback stage (4)\cir\CS_noise.asc
+C1 N002 N001 {C_A}
+XU1 N002 0 out NM18_noise ID={ID} IG={IG} W={W} L={L}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+C2 N002 0 {C_F}
+.lib SLiCAP.lib
+.lib SLiCAP.lib
+.backanno
+.end

@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="6.65in"
+   height="2.75in"
+   viewBox="-68.62 67.27 664.73 274.77"
+   id="svg182"
+   sodipodi:docname="CS_noise.asc.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata186">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     id="namedview184"
+     showgrid="false"
+     inkscape:snap-text-baseline="false"
+     inkscape:zoom="2.3699874"
+     inkscape:cx="319.2"
+     inkscape:cy="132"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg182" />
+  <title
+     id="title2">CS_noise</title>
+  <desc
+     id="desc4" />
+  <defs
+     id="defs8">
+    <!-- Styles -->
+    <style
+       type="text/css"
+       id="style6"><![CDATA[
+.netsegment{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.bussegment{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.74;}
+.shape{stroke:#600060;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.junction{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.pin{stroke:#0000FF;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;stroke-opacity:0.50;}
+.symbol{stroke:#000098;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.symbol-text{color:#000000;fill:#000000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+.comment-text{color:#004000;fill:#004000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;font-style:italic;}
+.directive-text{color:#700000;fill:#700000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+.label-text{color:#800080;fill:#800080;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+]]></style>
+  </defs>
+  <!-- Nodes -->
+  <line
+     x1="-15.36"
+     y1="122.88"
+     x2="76.800003"
+     y2="122.88"
+     class="netsegment"
+     id="line10" />
+  <line
+     x1="-15.36"
+     y1="261.12"
+     x2="-15.36"
+     y2="199.67999"
+     class="netsegment"
+     id="line13" />
+  <line
+     x1="168.96001"
+     y1="261.12"
+     x2="168.96001"
+     y2="230.39999"
+     class="netsegment"
+     id="line15" />
+  <line
+     x1="245.75999"
+     y1="261.12"
+     x2="245.75999"
+     y2="199.67999"
+     class="netsegment"
+     id="line17" />
+  <line
+     x1="153.60001"
+     y1="122.88"
+     x2="168.96001"
+     y2="122.88"
+     class="netsegment"
+     id="line20" />
+  <line
+     x1="168.96001"
+     y1="122.88"
+     x2="215.03999"
+     y2="122.88"
+     class="netsegment"
+     id="line22" />
+  <line
+     x1="168.96001"
+     y1="153.60001"
+     x2="168.96001"
+     y2="122.88"
+     class="netsegment"
+     id="line24" />
+  <line
+     x1="291.84"
+     y1="122.88"
+     x2="337.92001"
+     y2="122.88"
+     class="netsegment"
+     id="line27" />
+  <ellipse
+     cx="168.96"
+     cy="122.88"
+     rx="3.23"
+     ry="3.23"
+     style="fill:#0000C8;"
+     class="junction"
+     id="ellipse30" />
+  <!-- Devices -->
+  <line
+     x1="-24.959999"
+     y1="261.12"
+     x2="-5.7600002"
+     y2="261.12"
+     class="symbol"
+     id="line32" />
+  <line
+     x1="-5.7600002"
+     y1="261.12"
+     x2="-15.36"
+     y2="270.72"
+     class="symbol"
+     id="line34" />
+  <line
+     x1="-15.36"
+     y1="270.72"
+     x2="-24.959999"
+     y2="261.12"
+     class="symbol"
+     id="line36" />
+  <line
+     x1="236.16"
+     y1="261.12"
+     x2="255.36"
+     y2="261.12"
+     class="symbol"
+     id="line39" />
+  <line
+     x1="255.36"
+     y1="261.12"
+     x2="245.75999"
+     y2="270.72"
+     class="symbol"
+     id="line41" />
+  <line
+     x1="245.75999"
+     y1="270.72"
+     x2="236.16"
+     y2="261.12"
+     class="symbol"
+     id="line43" />
+  <line
+     x1="337.92001"
+     y1="110.23"
+     x2="382.45001"
+     y2="110.23"
+     class="symbol"
+     id="line46" />
+  <line
+     x1="382.45001"
+     y1="110.23"
+     x2="395.10001"
+     y2="122.88"
+     class="symbol"
+     id="line48" />
+  <line
+     x1="395.10001"
+     y1="122.88"
+     x2="382.45001"
+     y2="135.53"
+     class="symbol"
+     id="line50" />
+  <line
+     x1="382.45001"
+     y1="135.53"
+     x2="337.92001"
+     y2="135.53"
+     class="symbol"
+     id="line52" />
+  <line
+     x1="337.92001"
+     y1="135.53"
+     x2="337.92001"
+     y2="110.23"
+     class="symbol"
+     id="line54" />
+  <text
+     xml:space="preserve"
+     x="360.19"
+     y="130.58"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="label-text"
+     id="text58"> <tspan
+   x="360.19"
+   id="tspan56">out</tspan></text>
+  <line
+     x1="159.36"
+     y1="261.12"
+     x2="178.56"
+     y2="261.12"
+     class="symbol"
+     id="line61" />
+  <line
+     x1="178.56"
+     y1="261.12"
+     x2="168.96001"
+     y2="270.72"
+     class="symbol"
+     id="line63" />
+  <line
+     x1="168.96001"
+     y1="270.72"
+     x2="159.36"
+     y2="261.12"
+     class="symbol"
+     id="line65" />
+  <line
+     x1="111.36"
+     y1="122.88"
+     x2="76.800003"
+     y2="122.88"
+     class="symbol"
+     id="line68" />
+  <line
+     x1="119.04"
+     y1="122.88"
+     x2="153.60001"
+     y2="122.88"
+     class="symbol"
+     id="line70" />
+  <line
+     x1="119.04"
+     y1="107.52"
+     x2="119.04"
+     y2="138.24001"
+     class="symbol"
+     id="line72" />
+  <line
+     x1="111.36"
+     y1="107.52"
+     x2="111.36"
+     y2="138.24001"
+     class="symbol"
+     id="line74" />
+  <text
+     xml:space="preserve"
+     x="-128"
+     y="150.73999"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="end"
+     transform="rotate(-90)"
+     class="symbol-text"
+     id="text78"> <tspan
+   x="-128"
+   id="tspan76">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="115.2"
+     y="101.76"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text82"> <tspan
+   x="115.2"
+   id="tspan80">C1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="115.2"
+     y="159.39999"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text86"> <tspan
+   x="115.2"
+   id="tspan84">{C_A}</tspan></text>
+  <line
+     x1="215.03999"
+     y1="122.88"
+     x2="276.48001"
+     y2="122.88"
+     class="symbol"
+     id="line89" />
+  <line
+     x1="276.48001"
+     y1="122.88"
+     x2="291.84"
+     y2="122.88"
+     class="symbol"
+     id="line91" />
+  <line
+     x1="245.75999"
+     y1="153.60001"
+     x2="245.75999"
+     y2="122.88"
+     class="symbol"
+     id="line93" />
+  <line
+     x1="245.75999"
+     y1="199.67999"
+     x2="245.75999"
+     y2="168.96001"
+     class="symbol"
+     id="line95" />
+  <line
+     x1="253.44"
+     y1="161.28"
+     x2="238.08"
+     y2="161.28"
+     class="symbol"
+     id="line97" />
+  <circle
+     cx="268.79999"
+     cy="122.88"
+     class="symbol"
+     id="ellipse99"
+     r="7.6799998" />
+  <circle
+     cx="245.75999"
+     cy="161.28"
+     class="symbol"
+     id="ellipse101"
+     r="7.6799998" />
+  <text
+     xml:space="preserve"
+     x="255.73373"
+     y="110.82655"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text105"> <tspan
+   x="255.73373"
+   id="tspan103">vn</tspan></text>
+  <text
+     xml:space="preserve"
+     x="217.28523"
+     y="168.98"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text109"> <tspan
+   x="217.28523"
+   id="tspan107">in</tspan></text>
+  <text
+     xml:space="preserve"
+     x="262.07999"
+     y="149.01543"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text113"> <tspan
+   x="262.07999"
+   id="tspan111">U1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="262.07999"
+     y="168.77316"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text117"> <tspan
+   x="262.07999"
+   id="tspan115">NM18_noise</tspan></text>
+  <text
+     xml:space="preserve"
+     x="262.07999"
+     y="189.40103"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text121"> <tspan
+   x="262.07999"
+   id="tspan119">ID={ID} IG={IG} W={W} L={L}</tspan></text>
+  <line
+     x1="-15.36"
+     y1="122.88"
+     x2="-15.36"
+     y2="199.67999"
+     class="symbol"
+     id="line124" />
+  <circle
+     cx="-15.36"
+     cy="161.28"
+     class="symbol"
+     id="ellipse126"
+     r="23.040001" />
+  <text
+     xml:space="preserve"
+     x="-9.6000004"
+     y="142.10001"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text130"> <tspan
+   x="-9.6000004"
+   id="tspan128">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="-9.6000004"
+     y="195.86"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text134"> <tspan
+   x="-9.6000004"
+   id="tspan132">-</tspan></text>
+  <text
+     xml:space="preserve"
+     x="11.487198"
+     y="156.79382"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text138"> <tspan
+   x="11.487198"
+   id="tspan136">V1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="11.487198"
+     y="176.68343"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text142"> <tspan
+   x="11.487198"
+   id="tspan140">value=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="11.487198"
+     y="196.83086"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text146"> <tspan
+   x="11.487198"
+   id="tspan144">dc=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="11.487198"
+     y="216.97827"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text150"> <tspan
+   x="11.487198"
+   id="tspan148">dcvar=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="11.487198"
+     y="237.12569"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text154"> <tspan
+   x="11.487198"
+   id="tspan152">noise=0</tspan></text>
+  <line
+     x1="168.96001"
+     y1="195.84"
+     x2="168.96001"
+     y2="230.39999"
+     class="symbol"
+     id="line157" />
+  <line
+     x1="168.96001"
+     y1="188.16"
+     x2="168.96001"
+     y2="153.60001"
+     class="symbol"
+     id="line159" />
+  <line
+     x1="153.60001"
+     y1="188.16"
+     x2="184.32001"
+     y2="188.16"
+     class="symbol"
+     id="line161" />
+  <line
+     x1="153.60001"
+     y1="195.84"
+     x2="184.32001"
+     y2="195.84"
+     class="symbol"
+     id="line163" />
+  <text
+     xml:space="preserve"
+     x="174.72"
+     y="171.86"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text167"> <tspan
+   x="174.72"
+   id="tspan165">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="177.60001"
+     y="214.10001"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text171"> <tspan
+   x="177.60001"
+   id="tspan169">C2</tspan></text>
+  <text
+     xml:space="preserve"
+     x="177.60001"
+     y="235.72495"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text175"> <tspan
+   x="177.60001"
+   id="tspan173">{C_F}</tspan></text>
+  <!-- Directives -->
+  <text
+     xml:space="preserve"
+     x="38.40"
+     y="322.58"
+     font-family="Segoe UI"
+     font-size="22.00"
+     class="directive-text"
+     id="text180"
+     style="fill:#000000;">
+<tspan
+   x="38.40"
+   id="tspan178"
+   style="fill:#000000;">.lib SLiCAP.lib</tspan>
+</text>
+  <!-- Comments -->
+  <!-- Shapes -->
+</svg>
