@@ -1,0 +1,10 @@
+"Input noise modelling"
+* /Users/arthuradmiraal/Documents/TU Delft/Master/StructuredElectronicsDesign/AntennaAssignment/NoiseModel.asc
+XU1 Vout N002 0 0 CMOS18N W={W} L={L} ID={I_b}
+Iin 0 N002 {I_in}
+Vin N001 0 {V_in}
+Rin N001 N002 {R_in}
+Rload Vout 0 {R_load}
+.lib SLiCAP.lib
+.backanno
+.end

@@ -1,0 +1,35 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Gain"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Gain</h1></div>
+<p>The servo function is:</p>
+\begin{equation}
+A_{v}=\frac{0.8719 s}{7.502 \cdot 10^{-12} s^{2} + s}
+\end{equation}
+<h2>Servo response</h2>
+<figure><img src="img/dBmagZt.svg.svg" alt="" style="width:600px">
+</figure>
+<p>The $-3\mathrm{dB}$ bandwidth is at about $20\mathrm{GHz}$, and thus more than sufficient
+for this application. The bandwidth requirements thus leave room for power optimisation.
+</p>
+<h2>Request for feedback</h2>
+<p>The nice thing about this analysis is that it takes into account the transfer
+from the source to the driving quantity and from the amplifier output to the load. However, it doesn't
+facilitate adressing performance limitations for the controller, since there is no straightforward
+correspondence between the parameters of the transistor and the resulting performance. I thought of
+finding the chain matrix of the entire system in terms of the chain matrix of the controller, which
+could be done by subtracting the feedback matrix from it. However, this doesn't give nice expressions
+and finding the transmission 1 parameters corresponding to a given performance isn't straightforward
+either. Is there a more insightful way to go about this?</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Loop-gain-of-voltage-input-dual-feedback-loop-implementation_index.html">Loop-gain-of-voltage-input-dual-feedback-loop-implementation_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-12-06 20:41:22</p>
+</div></body></html>

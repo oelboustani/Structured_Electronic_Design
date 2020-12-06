@@ -1,0 +1,106 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Circuit date"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Circuit date</h1></div>
+<p>Here, we find the T1 parameters for the CS stage in terms of the transistor parameters.</p>
+<h2>Circuit diagram</h2>
+<figure><img src="img/DualFB_CS_chain.png" alt="" style="width:400px">
+</figure>
+<h2>Netlist: DualFB_ChainMatrix.net</h2>
+<pre>"Input noise modelling"
+* /Users/arthuradmiraal/Documents/TU Delft/Master/StructuredElectronicsDesign/AntennaAssignment/NoiseModel.asc
+XU1 Vout N002 0 0 CMOS18N W={W} L={L} ID={I_b}
+Iin 0 N002 {I_in}
+Vin N001 0 {V_in}
+Rin N001 N002 {R_in}
+Rload Vout 0 {R_load}
+.lib SLiCAP.lib
+.backanno
+.end</pre>
+<table><caption>Table: Element data of expanded netlist 'Input noise modelling'</caption>
+<tr><th class="left">RefDes</th><th class="left">Nodes</th><th class="left">Refs</th><th class="left">Model</th><th class="left">Param</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">Cdb_M1_XU1</td><td class = "left">Vout 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{db XU1}$</td><td class="left">$1.8 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">Cdg_M1_XU1</td><td class = "left">Vout N002 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{dg XU1}$</td><td class="left">$3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">Cgb_M1_XU1</td><td class = "left">N002 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gb XU1}$</td><td class="left">$0.0007279 L W + 2.0 \cdot 10^{-12} L$</td></tr>
+<tr><td class="left">Cgs_M1_XU1</td><td class = "left">N002 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gs XU1}$</td><td class="left">$0.005615 L W + 3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">Csb_M1_XU1</td><td class = "left">0 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{sb XU1}$</td><td class="left">$1.8 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">Gb_M1_XU1</td><td class = "left">Vout 0 0 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{b XU1}$</td><td class="left">$\frac{0.008031 I_{b}}{\left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">Gm_M1_XU1</td><td class = "left">Vout 0 N002 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{m XU1}$</td><td class="left">$\frac{0.02295 I_{b}}{\left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">Go_M1_XU1</td><td class = "left">Vout 0 Vout 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{o XU1}$</td><td class="left">$\frac{2.5 \cdot 10^{-8} I_{b}}{L}$</td></tr>
+<tr><td class="left">Iin</td><td class = "left">0 N002 </td><td class = "left"></td><td class = "left">I</td>
+<td class="left">value</td><td class="left">$I_{in}$</td><td class="left">$I_{in}$</td></tr>
+<tr><td class="left">Rin</td><td class = "left">N001 N002 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{in}$</td><td class="left">$R_{in}$</td></tr>
+<tr><td class="left">Rload</td><td class = "left">Vout 0 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{load}$</td><td class="left">$R_{load}$</td></tr>
+<tr><td class="left">Vin</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$V_{in}$</td><td class="left">$V_{in}$</td></tr>
+</table>
+<table><caption>Table: Parameter definitions in 'Input noise modelling'.</caption>
+<tr><th class="left">Name</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">$CGBO_{N18}$</td><td class="left">$1.0 \cdot 10^{-12}$</td><td class="left">$1.0 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$CGSO_{N18}$</td><td class="left">$3.0 \cdot 10^{-10}$</td><td class="left">$3.0 \cdot 10^{-10}$</td></tr>
+<tr><td class="left">$CJB_{0 N18}$</td><td class="left">$0.001$</td><td class="left">$0.001$</td></tr>
+<tr><td class="left">$C_{OX N18}$</td><td class="left">$\frac{\epsilon_{0} \epsilon_{SiO2}}{TOX_{N18}}$</td><td class="left">$0.008422$</td></tr>
+<tr><td class="left">$E_{CRIT N18}$</td><td class="left">$5.6 \cdot 10^{6}$</td><td class="left">$5.6 \cdot 10^{6}$</td></tr>
+<tr><td class="left">$I_{0 N18}$</td><td class="left">$2 C_{OX N18} N_{s N18} U_{T}^{2} u_{0 N18}$</td><td class="left">$6.413 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$LDS_{N18}$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$N_{s N18}$</td><td class="left">$1.35$</td><td class="left">$1.35$</td></tr>
+<tr><td class="left">$T$</td><td class="left">$300$</td><td class="left">$300.0$</td></tr>
+<tr><td class="left">$TOX_{N18}$</td><td class="left">$4.1 \cdot 10^{-9}$</td><td class="left">$4.1 \cdot 10^{-9}$</td></tr>
+<tr><td class="left">$\Theta_{N18}$</td><td class="left">$0.28$</td><td class="left">$0.28$</td></tr>
+<tr><td class="left">$U_{T}$</td><td class="left">$\frac{T k}{q}$</td><td class="left">$0.02585$</td></tr>
+<tr><td class="left">$VAL_{N18}$</td><td class="left">$4.0 \cdot 10^{7}$</td><td class="left">$4.0 \cdot 10^{7}$</td></tr>
+<tr><td class="left">$Vth_{N18}$</td><td class="left">$0.36$</td><td class="left">$0.36$</td></tr>
+<tr><td class="left">$c$</td><td class="left">$2.998 \cdot 10^{8}$</td><td class="left">$2.998 \cdot 10^{8}$</td></tr>
+<tr><td class="left">$\epsilon_{0}$</td><td class="left">$\frac{1}{c^{2} \mu_{0}}$</td><td class="left">$8.854 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$\epsilon_{SiO2}$</td><td class="left">$3.9$</td><td class="left">$3.9$</td></tr>
+<tr><td class="left">$k$</td><td class="left">$1.381 \cdot 10^{-23}$</td><td class="left">$1.381 \cdot 10^{-23}$</td></tr>
+<tr><td class="left">$\mu_{0}$</td><td class="left">$4.0 \cdot 10^{-7} \pi$</td><td class="left">$1.257 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$q$</td><td class="left">$1.602 \cdot 10^{-19}$</td><td class="left">$1.602 \cdot 10^{-19}$</td></tr>
+<tr><td class="left">$u_{0 N18}$</td><td class="left">$0.0422$</td><td class="left">$0.0422$</td></tr>
+<tr><td class="left">$IC_{CRIT XU1}$</td><td class="left">$\frac{1}{16 N_{s N18}^{2} U_{T}^{2} \left(\Theta_{N18} + \frac{1}{E_{CRIT N18} L}\right)^{2}}$</td><td class="left">$\frac{654.5}{\left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}$</td></tr>
+<tr><td class="left">$IC_{XU1}$</td><td class="left">$\frac{I_{b} L}{I_{0 N18} W}$</td><td class="left">$\frac{1.559 \cdot 10^{6} I_{b} L}{W}$</td></tr>
+<tr><td class="left">$V_{GS XU1}$</td><td class="left">$2 N_{s N18} U_{T} \log{\left(e^{\sqrt{IC_{XU1}}} - 1 \right)} + Vth_{N18}$</td><td class="left">$0.0698 \log{\left(e^{498.2 \sqrt{2} \sqrt{\pi} \sqrt{\frac{I_{b} L}{W}}} - 1 \right)} + 0.36$</td></tr>
+<tr><td class="left">$c_{db XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W$</td><td class="left">$1.8 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{dg XU1}$</td><td class="left">$CGSO_{N18} W$</td><td class="left">$3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{gb XU1}$</td><td class="left">$2 CGBO_{N18} L + \frac{C_{OX N18} L W \left(N_{s N18} - 1\right)}{3 N_{s N18}}$</td><td class="left">$0.0007279 L W + 2.0 \cdot 10^{-12} L$</td></tr>
+<tr><td class="left">$c_{gs XU1}$</td><td class="left">$CGSO_{N18} W + \frac{2 C_{OX N18} L W}{3}$</td><td class="left">$0.005615 L W + 3.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{iss XU1}$</td><td class="left">$c_{dg XU1} + c_{gb XU1} + c_{gs XU1}$</td><td class="left">$0.006343 L W + 2.0 \cdot 10^{-12} L + 6.0 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$c_{sb XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W$</td><td class="left">$1.8 \cdot 10^{-10} W$</td></tr>
+<tr><td class="left">$f_{T XU1}$</td><td class="left">$\frac{g_{m XU1}}{2 \pi c_{iss XU1}}$</td><td class="left">$\frac{0.003652 I_{b}}{\left(0.006343 L W + 2.0 \cdot 10^{-12} L + 6.0 \cdot 10^{-10} W\right) \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">$g_{b XU1}$</td><td class="left">$g_{m XU1} \left(N_{s N18} - 1\right)$</td><td class="left">$\frac{0.008031 I_{b}}{\left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">$g_{m XU1}$</td><td class="left">$\frac{I_{b}}{N_{s N18} U_{T} \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right) + 0.5 \sqrt{IC_{XU1} \left(1 + \frac{IC_{XU1}}{IC_{CRIT XU1}}\right)} + 1}}$</td><td class="left">$\frac{0.02295 I_{b}}{\left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W} + 0.0004004 \left(\frac{I_{b} L \left(\frac{2382.0 I_{b} L \left(1 + \frac{6.378 \cdot 10^{-7}}{L}\right)^{2}}{W} + 1\right)}{W}\right)^{0.5} + 6.414 \cdot 10^{-7}\right)^{0.5}}$</td></tr>
+<tr><td class="left">$g_{o XU1}$</td><td class="left">$\frac{I_{b}}{L VAL_{N18}}$</td><td class="left">$\frac{2.5 \cdot 10^{-8} I_{b}}{L}$</td></tr>
+</table>
+<table><caption>Table: Parameters without definition in 'Input noise modelling.</caption>
+
+<tr><th class="left">Name</th></tr>
+<tr><td class="left">$R_{load}$</td></tr>
+<tr><td class="left">$I_{in}$</td></tr>
+<tr><td class="left">$I_{b}$</td></tr>
+<tr><td class="left">$V_{in}$</td></tr>
+<tr><td class="left">$L$</td></tr>
+<tr><td class="left">$R_{in}$</td></tr>
+<tr><td class="left">$W$</td></tr>
+</table>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Input-noise-modelling_index.html">Input-noise-modelling_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-12-06 10:02:36</p>
+</div></body></html>
