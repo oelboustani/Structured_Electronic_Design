@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="8.89in"
+   height="4.78in"
+   viewBox="-78.82 -80.19 889.30 477.52"
+   id="svg1359"
+   sodipodi:docname="push-pull.asc.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata1363">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     id="namedview1361"
+     showgrid="false"
+     inkscape:zoom="3.2819036"
+     inkscape:cx="199.72932"
+     inkscape:cy="271.96282"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1359" />
+  <title
+     id="title1099">push-pull</title>
+  <desc
+     id="desc1101" />
+  <defs
+     id="defs1105">
+    <!-- Styles -->
+    <style
+       type="text/css"
+       id="style1103"><![CDATA[
+.netsegment{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.bussegment{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.74;}
+.shape{stroke:#600060;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.junction{stroke:#0000C8;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.pin{stroke:#0000FF;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;stroke-opacity:0.50;}
+.symbol{stroke:#000098;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.87;}
+.symbol-text{color:#000000;fill:#000000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+.comment-text{color:#004000;fill:#004000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;font-style:italic;}
+.directive-text{color:#700000;fill:#700000;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+.label-text{color:#800080;fill:#800080;font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-weight:600;}
+]]></style>
+  </defs>
+  <!-- Nodes -->
+  <line
+     x1="-15.36"
+     y1="122.88"
+     x2="76.800003"
+     y2="122.88"
+     class="netsegment"
+     id="line1107" />
+  <line
+     x1="-15.36"
+     y1="261.12"
+     x2="-15.36"
+     y2="199.67999"
+     class="netsegment"
+     id="line1110" />
+  <line
+     x1="307.20001"
+     y1="122.88"
+     x2="337.92001"
+     y2="122.88"
+     class="netsegment"
+     id="line1112" />
+  <line
+     x1="307.20001"
+     y1="245.75999"
+     x2="307.20001"
+     y2="153.60001"
+     class="netsegment"
+     id="line1114" />
+  <line
+     x1="337.92001"
+     y1="153.60001"
+     x2="337.92001"
+     y2="122.88"
+     class="netsegment"
+     id="line1116" />
+  <line
+     x1="506.88"
+     y1="245.75999"
+     x2="506.88"
+     y2="184.32001"
+     class="netsegment"
+     id="line1118" />
+  <line
+     x1="215.03999"
+     y1="122.88"
+     x2="215.03999"
+     y2="-15.36"
+     class="netsegment"
+     id="line1121" />
+  <line
+     x1="153.60001"
+     y1="122.88"
+     x2="215.03999"
+     y2="122.88"
+     class="netsegment"
+     id="line1123" />
+  <line
+     x1="215.03999"
+     y1="-15.36"
+     x2="276.48001"
+     y2="-15.36"
+     class="netsegment"
+     id="line1125" />
+  <line
+     x1="215.03999"
+     y1="122.88"
+     x2="261.12"
+     y2="122.88"
+     class="netsegment"
+     id="line1127" />
+  <line
+     x1="353.28"
+     y1="76.800003"
+     x2="353.28"
+     y2="-15.36"
+     class="netsegment"
+     id="line1130" />
+  <line
+     x1="307.20001"
+     y1="76.800003"
+     x2="353.28"
+     y2="76.800003"
+     class="netsegment"
+     id="line1132" />
+  <line
+     x1="430.07999"
+     y1="76.800003"
+     x2="506.88"
+     y2="76.800003"
+     class="netsegment"
+     id="line1135" />
+  <line
+     x1="506.88"
+     y1="76.800003"
+     x2="583.67999"
+     y2="76.800003"
+     class="netsegment"
+     id="line1137" />
+  <line
+     x1="506.88"
+     y1="107.52"
+     x2="506.88"
+     y2="76.800003"
+     class="netsegment"
+     id="line1139" />
+  <ellipse
+     cx="215.04"
+     cy="122.88"
+     rx="3.23"
+     ry="3.23"
+     style="fill:#0000C8;"
+     class="junction"
+     id="ellipse1142" />
+  <ellipse
+     cx="506.88"
+     cy="76.80"
+     rx="3.23"
+     ry="3.23"
+     style="fill:#0000C8;"
+     class="junction"
+     id="ellipse1144" />
+  <!-- Devices -->
+  <line
+     x1="-24.959999"
+     y1="261.12"
+     x2="-5.7600002"
+     y2="261.12"
+     class="symbol"
+     id="line1146" />
+  <line
+     x1="-5.7600002"
+     y1="261.12"
+     x2="-15.36"
+     y2="270.72"
+     class="symbol"
+     id="line1148" />
+  <line
+     x1="-15.36"
+     y1="270.72"
+     x2="-24.959999"
+     y2="261.12"
+     class="symbol"
+     id="line1150" />
+  <line
+     x1="583.67999"
+     y1="64.150002"
+     x2="628.21002"
+     y2="64.150002"
+     class="symbol"
+     id="line1153" />
+  <line
+     x1="628.21002"
+     y1="64.150002"
+     x2="640.85999"
+     y2="76.800003"
+     class="symbol"
+     id="line1155" />
+  <line
+     x1="640.85999"
+     y1="76.800003"
+     x2="628.21002"
+     y2="89.449997"
+     class="symbol"
+     id="line1157" />
+  <line
+     x1="628.21002"
+     y1="89.449997"
+     x2="583.67999"
+     y2="89.449997"
+     class="symbol"
+     id="line1159" />
+  <line
+     x1="583.67999"
+     y1="89.449997"
+     x2="583.67999"
+     y2="64.150002"
+     class="symbol"
+     id="line1161" />
+  <text
+     xml:space="preserve"
+     x="605.95001"
+     y="84.5"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="label-text"
+     id="text1165"> <tspan
+   x="605.95001"
+   id="tspan1163">out</tspan></text>
+  <line
+     x1="297.60001"
+     y1="245.75999"
+     x2="316.79999"
+     y2="245.75999"
+     class="symbol"
+     id="line1168" />
+  <line
+     x1="316.79999"
+     y1="245.75999"
+     x2="307.20001"
+     y2="255.36"
+     class="symbol"
+     id="line1170" />
+  <line
+     x1="307.20001"
+     y1="255.36"
+     x2="297.60001"
+     y2="245.75999"
+     class="symbol"
+     id="line1172" />
+  <line
+     x1="328.32001"
+     y1="153.60001"
+     x2="347.51999"
+     y2="153.60001"
+     class="symbol"
+     id="line1175" />
+  <line
+     x1="347.51999"
+     y1="153.60001"
+     x2="337.92001"
+     y2="163.2"
+     class="symbol"
+     id="line1177" />
+  <line
+     x1="337.92001"
+     y1="163.2"
+     x2="328.32001"
+     y2="153.60001"
+     class="symbol"
+     id="line1179" />
+  <line
+     x1="497.28"
+     y1="245.75999"
+     x2="516.47998"
+     y2="245.75999"
+     class="symbol"
+     id="line1182" />
+  <line
+     x1="516.47998"
+     y1="245.75999"
+     x2="506.88"
+     y2="255.36"
+     class="symbol"
+     id="line1184" />
+  <line
+     x1="506.88"
+     y1="255.36"
+     x2="497.28"
+     y2="245.75999"
+     class="symbol"
+     id="line1186" />
+  <line
+     x1="111.36"
+     y1="122.88"
+     x2="76.800003"
+     y2="122.88"
+     class="symbol"
+     id="line1189" />
+  <line
+     x1="119.04"
+     y1="122.88"
+     x2="153.60001"
+     y2="122.88"
+     class="symbol"
+     id="line1191" />
+  <line
+     x1="119.04"
+     y1="107.52"
+     x2="119.04"
+     y2="138.24001"
+     class="symbol"
+     id="line1193" />
+  <line
+     x1="111.36"
+     y1="107.52"
+     x2="111.36"
+     y2="138.24001"
+     class="symbol"
+     id="line1195" />
+  <text
+     xml:space="preserve"
+     x="-128"
+     y="104.38438"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="end"
+     transform="rotate(-90)"
+     class="symbol-text"
+     id="text1199"> <tspan
+   x="-128"
+   id="tspan1197">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="115.2"
+     y="101.76"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1203"> <tspan
+   x="115.2"
+   id="tspan1201">C1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="121.93528"
+     y="159.39999"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1207"> <tspan
+   x="121.93528"
+   id="tspan1205">{C_A}</tspan></text>
+  <line
+     x1="-15.36"
+     y1="122.88"
+     x2="-15.36"
+     y2="199.67999"
+     class="symbol"
+     id="line1210" />
+  <circle
+     cx="-15.36"
+     cy="161.28"
+     class="symbol"
+     id="ellipse1212"
+     r="23.040001" />
+  <text
+     xml:space="preserve"
+     x="-9.6000004"
+     y="142.10001"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1216"> <tspan
+   x="-9.6000004"
+   id="tspan1214">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="-9.6000004"
+     y="195.86"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1220"> <tspan
+   x="-9.6000004"
+   id="tspan1218">-</tspan></text>
+  <text
+     xml:space="preserve"
+     x="12.72785"
+     y="151.44585"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1224"> <tspan
+   x="12.72785"
+   id="tspan1222">V1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="12.72785"
+     y="169.78557"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1228"> <tspan
+   x="12.72785"
+   id="tspan1226">value=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="12.72785"
+     y="187.98564"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1232"> <tspan
+   x="12.72785"
+   id="tspan1230">dc=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="12.72785"
+     y="206.18573"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1236"> <tspan
+   x="12.72785"
+   id="tspan1234">dcvar=0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="12.72785"
+     y="224.31601"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1240"> <tspan
+   x="12.72785"
+   id="tspan1238">noise=0</tspan></text>
+  <line
+     x1="307.20001"
+     y1="138.24001"
+     x2="307.20001"
+     y2="153.60001"
+     class="symbol"
+     id="line1243" />
+  <line
+     x1="276.48001"
+     y1="138.24001"
+     x2="307.20001"
+     y2="138.24001"
+     class="symbol"
+     id="line1245" />
+  <line
+     x1="276.48001"
+     y1="122.88"
+     x2="307.20001"
+     y2="122.88"
+     class="symbol"
+     id="line1247" />
+  <line
+     x1="276.48001"
+     y1="92.160004"
+     x2="276.48001"
+     y2="99.839996"
+     class="symbol"
+     id="line1249" />
+  <line
+     x1="276.48001"
+     y1="107.52"
+     x2="276.48001"
+     y2="122.88"
+     class="symbol"
+     id="line1251" />
+  <line
+     x1="276.48001"
+     y1="130.56"
+     x2="276.48001"
+     y2="138.24001"
+     class="symbol"
+     id="line1253" />
+  <line
+     x1="268.79999"
+     y1="91.199997"
+     x2="268.79999"
+     y2="138.24001"
+     class="symbol"
+     id="line1255" />
+  <line
+     x1="307.20001"
+     y1="92.160004"
+     x2="276.48001"
+     y2="92.160004"
+     class="symbol"
+     id="line1257" />
+  <line
+     x1="307.20001"
+     y1="76.800003"
+     x2="307.20001"
+     y2="92.160004"
+     class="symbol"
+     id="line1259" />
+  <line
+     x1="261.12"
+     y1="122.88"
+     x2="268.79999"
+     y2="122.88"
+     class="symbol"
+     id="line1261" />
+  <line
+     x1="291.84"
+     y1="130.56"
+     x2="284.16"
+     y2="138.24001"
+     class="symbol"
+     id="line1263" />
+  <line
+     x1="299.51999"
+     y1="138.24001"
+     x2="291.84"
+     y2="145.92"
+     class="symbol"
+     id="line1265" />
+  <line
+     x1="284.16"
+     y1="138.24001"
+     x2="291.84"
+     y2="145.92"
+     class="symbol"
+     id="line1267" />
+  <line
+     x1="291.84"
+     y1="130.56"
+     x2="299.51999"
+     y2="138.24001"
+     class="symbol"
+     id="line1269" />
+  <text
+     xml:space="preserve"
+     x="-16.295"
+     y="392.1553"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1273"> <tspan
+   x="-16.295"
+   id="tspan1271">U1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="-16.295"
+     y="368.87399"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1277"> <tspan
+   x="-16.295"
+   id="tspan1275">CMOS18PN</tspan></text>
+  <text
+     xml:space="preserve"
+     x="-16.295"
+     y="343.7988"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1281"> <tspan
+   x="-16.295"
+   id="tspan1279">W_N={W_N} L_N={L_N} ID_N={ID} W_P={W_P} L_P={L_P} ID_P={ID}</tspan></text>
+  <line
+     x1="311.04001"
+     y1="-15.36"
+     x2="276.48001"
+     y2="-15.36"
+     class="symbol"
+     id="line1284" />
+  <line
+     x1="318.72"
+     y1="-15.36"
+     x2="353.28"
+     y2="-15.36"
+     class="symbol"
+     id="line1286" />
+  <line
+     x1="318.72"
+     y1="-30.719999"
+     x2="318.72"
+     y2="0"
+     class="symbol"
+     id="line1288" />
+  <line
+     x1="311.04001"
+     y1="-30.719999"
+     x2="311.04001"
+     y2="0"
+     class="symbol"
+     id="line1290" />
+  <text
+     xml:space="preserve"
+     x="10.240002"
+     y="350.42001"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="end"
+     transform="rotate(-90)"
+     class="symbol-text"
+     id="text1294"> <tspan
+   x="10.240002"
+   id="tspan1292">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="314.88"
+     y="-36.48"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1298"> <tspan
+   x="314.88"
+   id="tspan1296">C2</tspan></text>
+  <text
+     xml:space="preserve"
+     x="314.88"
+     y="21.16"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1302"> <tspan
+   x="314.88"
+   id="tspan1300">{C_F}</tspan></text>
+  <line
+     x1="411.84"
+     y1="76.800003"
+     x2="430.07999"
+     y2="76.800003"
+     class="symbol"
+     id="line1305" />
+  <line
+     x1="371.51999"
+     y1="76.800003"
+     x2="353.28"
+     y2="76.800003"
+     class="symbol"
+     id="line1307" />
+  <line
+     x1="371.51999"
+     y1="84.480003"
+     x2="371.51999"
+     y2="69.120003"
+     class="symbol"
+     id="line1309" />
+  <line
+     x1="371.51999"
+     y1="69.120003"
+     x2="411.84"
+     y2="69.120003"
+     class="symbol"
+     id="line1311" />
+  <line
+     x1="411.84"
+     y1="69.120003"
+     x2="411.84"
+     y2="84.480003"
+     class="symbol"
+     id="line1313" />
+  <line
+     x1="411.84"
+     y1="84.480003"
+     x2="371.51999"
+     y2="84.480003"
+     class="symbol"
+     id="line1315" />
+  <text
+     xml:space="preserve"
+     x="-71.999985"
+     y="369.62"
+     font-family="Segoe UI"
+     font-size="22px"
+     transform="rotate(-90)"
+     class="symbol-text"
+     id="text1319"> <tspan
+   x="-71.999985"
+   id="tspan1317">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="391.67999"
+     y="63.360001"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1323"> <tspan
+   x="391.67999"
+   id="tspan1321">R1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="391.67999"
+     y="105.64"
+     font-family="Segoe UI"
+     font-size="22px"
+     text-anchor="middle"
+     class="symbol-text"
+     id="text1327"> <tspan
+   x="391.67999"
+   id="tspan1325">50</tspan></text>
+  <line
+     x1="506.88"
+     y1="166.08"
+     x2="506.88"
+     y2="184.32001"
+     class="symbol"
+     id="line1330" />
+  <line
+     x1="506.88"
+     y1="125.76"
+     x2="506.88"
+     y2="107.52"
+     class="symbol"
+     id="line1332" />
+  <line
+     x1="499.20001"
+     y1="125.76"
+     x2="514.56"
+     y2="125.76"
+     class="symbol"
+     id="line1334" />
+  <line
+     x1="514.56"
+     y1="125.76"
+     x2="514.56"
+     y2="166.08"
+     class="symbol"
+     id="line1336" />
+  <line
+     x1="514.56"
+     y1="166.08"
+     x2="499.20001"
+     y2="166.08"
+     class="symbol"
+     id="line1338" />
+  <line
+     x1="499.20001"
+     y1="166.08"
+     x2="499.20001"
+     y2="125.76"
+     class="symbol"
+     id="line1340" />
+  <text
+     xml:space="preserve"
+     x="511.67999"
+     y="123.86"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1344"> <tspan
+   x="511.67999"
+   id="tspan1342">+</tspan></text>
+  <text
+     xml:space="preserve"
+     x="523.20001"
+     y="145.94"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1348"> <tspan
+   x="523.20001"
+   id="tspan1346">R2</tspan></text>
+  <text
+     xml:space="preserve"
+     x="523.20001"
+     y="166.38007"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="symbol-text"
+     id="text1352"> <tspan
+   x="523.20001"
+   id="tspan1350">50</tspan></text>
+  <!-- Directives -->
+  <text
+     xml:space="preserve"
+     x="-16.295"
+     y="322.57999"
+     font-family="Segoe UI"
+     font-size="22px"
+     class="directive-text"
+     id="text1357"
+     style="fill:#000000"> <tspan
+   x="-16.295"
+   id="tspan1355"
+   style="fill:#000000">.lib SLiCAP.lib</tspan></text>
+  <!-- Comments -->
+  <!-- Shapes -->
+</svg>

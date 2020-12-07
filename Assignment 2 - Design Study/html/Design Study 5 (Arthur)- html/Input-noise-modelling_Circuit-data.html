@@ -1,0 +1,38 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Circuit data"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Circuit data</h1></div>
+<p>The highest bandwidth is obtained for maximum $f_T$, which is obtained for critical
+inversion.</p>
+<h2>Circuit diagram</h2>
+<figure><img src="img/DualFB_CS_loopgain.png" alt="" style="width:400px">
+</figure>
+<h2>Netlist: DualFB_Loopgain.net</h2>
+<pre>"Loop gain of voltage-input dual feedback loop implementation"
+* /Users/arthuradmiraal/Documents/TU Delft/Master/StructuredElectronicsDesign/AntennaAssignment2/cir/DualFB_NoiseModel.asc
+XU1 N003 N005 0 0 CMOS18N l={L} w={W} ID={ID}
+V1 N004 0 {E_in}
+C1 P001 N001 {l*c_antl}
+T1 P001 0 N004 0 {l_ant}
+H1 N002 N005 N003 Vout {1/gamma}
+E1 N001 N002 Vout 0 {1/mu}
+R_load Vout 0 {R_load}
+.param mu={mu} gamma={gamma}
+.lib SLiCAP.lib
+.backanno
+.end
+</pre>
+<h2>Parameters</h2>
+<p>The inversion level is set to critical inversion</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="index.html">index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-12-06 12:35:30</p>
+</div></body></html>

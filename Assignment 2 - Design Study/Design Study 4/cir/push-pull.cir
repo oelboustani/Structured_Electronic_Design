@@ -1,0 +1,11 @@
+"Small-signal behavoir"
+* C:\Users\Ossama El Boustani\Workspace\Reposititories\Structured_Electronic_Design\Assignment 2 - Design Study\Design Study 4\cir\push-pull.asc
+C1 N001 N003 {C_A}
+V1 N003 0 V value=0 dc=0 dcvar=0 noise=0
+XU1 N002 N001 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID} W_P={W_P} L_P={L_P} ID_P={ID}
+C2 N002 N001 {C_F}
+R1 N002 out 50
+R2 out 0 50
+.lib SLiCAP.lib
+.backanno
+.end

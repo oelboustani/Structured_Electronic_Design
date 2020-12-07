@@ -1,0 +1,41 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Distortion"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Distortion</h1></div>
+<p>With perfect feedback, the controller is the only nonlinear part of the loop, so that the differential
+gain of the loop gain is equal to the differential gain of the controller gain. Since SLiCAP doesn't cover nonlinearities,
+I modelled the controller in LTSpice, using model-based biasing and a nullor approximation to find the differential gain
+over the output range:</p>
+<figure><img src="img/DualFB_DistortionTermination.png" alt="" style="width:400px">
+</figure>
+<p>This is the point were I get stuck.</p>
+<p>First up, it seems to me that the input and output port terminations
+both influence the transfer characteristic, because of the nonlinear input and output impedances of the controller. The
+output impedance is easy enough to model, but since the input port is capacitive, it won't converge at DC. Analytically,
+it would make sense to go for some kind of quasi-static approach by taking the limit for arbitrarily low frequencies, 
+but I have no idea how to implement that as a sweep in spice.</p>
+<p>Second, I don't know how to find the distortion-optimised CS stage. I figured higher bias currents 
+should reduce distortion, since the load excursion causes a smaller disturbance of the bias point, but the high voltages
+on the gate can cause the stage to enter the triode region. Even avoiding that, there seems to be an optimum current
+for minimising distortion, where the differential gain of the controller gain drops quicker than the controller gain.
+That's different from what I would expect based on the EKV model, so that the only way to find this optimum would be
+through numerical methods.</p>
+<p>Finally, I'm not quite sure how to properly validate whether the distortion is low
+enough. One way would be to estimate the taylor coefficients based on the simulation results, but that seems overly
+time-consuming. One advantage would be that the effect of balancing could be easily calculated. Another approach
+would be to perform two-tone tests and amplitude sweeps using a simulated model of a distortion-optimised amplifier.
+However, that doesn't seem very insightful. Both of these approaches have the issue that they don't provide insight
+into how the controller could be optimised for lower distortion.</p>
+<p>Is there a better way to tackle this problem?</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Loop-gain-of-voltage-input-dual-feedback-loop-implementation_index.html">Loop-gain-of-voltage-input-dual-feedback-loop-implementation_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-12-06 20:41:22</p>
+</div></body></html>
