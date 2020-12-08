@@ -3,11 +3,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="Language" content="English"/>
-<title>"Balanced single loop feedback"</title><link rel="stylesheet" href="css/slicap.css">
+<title>"Output Drive"</title><link rel="stylesheet" href="css/slicap.css">
 <script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
 <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-</head><body><div id="top"><h1>Balanced single loop feedback</h1></div>
-<h2>Table of contents</h2><ol><li><a href="Output-Drive_Introduction-and-Requirements.html">Introduction and Requirements</a></li><li><a href="Noise-Analysis_index.html">Noise Analysis</a></li><li><a href="Small-Signal-Dynamic-Behaviour_index.html">Small Signal Dynamic Behaviour</a></li><li><a href="Output-Drive_index.html">Output Drive</a></li><!-- INSERT --></ol>
+</head><body><div id="top"><h1>Output Drive</h1></div>
+<h2>Table of contents</h2><ol><h2>Drive capabilities</h2>
+<p>We choose the minimum length $L = 180 nm$ and we iterate to find the width for which the ouput clips at approximately $350 mV$ which is needed for the load. We take the width of the PMOS 4 times higher than the width of the NMOS because the PMOS has lower mobility.We arrived at $W_N = 180 \mu m$ and $W_P = 720 \mu m$. From the transient simulation results, we can conclude that the stage satisfies the driving requirements. The output is plotted across the $50 \Omega load$.  </p>
+<h2>LTspice Schematic</h2>
+<figure><img src="img/CompParallel.svg" alt="" style="width:600px">
+</figure>
+<h2>LTspice simulation</h2>
+<figure><img src="img/Bias_out.svg" alt="" style="width:600px">
+</figure>
+<!-- INSERT --></ol>
 <div id="footnote">
 <p>Go to <a href="index.html">index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Small Signal Dynamic Behaviour"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Small Signal Dynamic Behaviour</h1></div>
+<h2>Table of contents</h2><ol><h2>SLiCAP Circuit diagram</h2>
+<h2>Netlist: push-pull_Slicap.cir</h2>
+<pre>"Small Signal Dynamic Behaviour"
+* C:\Users\maboa\Desktop\Structured Electronic Design\Structured_Electronic_Design\Assignment 2 - Design Study\Design Study 4\cir\push-pull_Slicap.asc
+C1 N001 N003 {C_A}
+V1 N003 0 V value=0 dc=0 dcvar=0 noise=0
+XU1 N002 N001 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID} W_P={W_P} L_P={L_P} ID_P={ID}
+C2 N002 N001 {C_F}
+R1 N002 out 50
+R2 out 0 50
+.lib SLiCAP.lib
+.backanno
+.end
+</pre>
+<figure><img src="img/push-pull.svg" alt="" style="width:600px">
+</figure>
+<h2>Introduction</h2>
+<p>We choose the same parameters obtained from the noise analysis. $L = 1.6 \mu m$. We take halfe the width and the current. For the NMOS device $W_N = 350$ and we take 4 times higher width for the PMOS device $W_P = 1400 \mu m$. The curent $ID = 5 mA$</p>
+<h2>Circuit Data</h2>
+<table><caption>Table: Element data of expanded netlist 'Small Signal Dynamic Behaviour'</caption>
+<tr><th class="left">RefDes</th><th class="left">Nodes</th><th class="left">Refs</th><th class="left">Model</th><th class="left">Param</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">C1</td><td class = "left">N001 N003 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{A}$</td><td class="left">$4.2 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">C2</td><td class = "left">N002 N001 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{F}$</td><td class="left">$2.1 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">Cdb_M1_XU1</td><td class = "left">N002 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{db XU1}$</td><td class="left">$3.15 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">Cdg_M1_XU1</td><td class = "left">N002 N001 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{dg XU1}$</td><td class="left">$5.25 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">Cgb_M1_XU1</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gb XU1}$</td><td class="left">$2.038 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">Cgs_M1_XU1</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{gs XU1}$</td><td class="left">$1.625 \cdot 10^{-11}$</td></tr>
+<tr><td class="left">Csb_M1_XU1</td><td class = "left">0 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$c_{sb XU1}$</td><td class="left">$3.15 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">Gb_M1_XU1</td><td class = "left">N002 0 0 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{b XU1}$</td><td class="left">$0.01455$</td></tr>
+<tr><td class="left">Gm_M1_XU1</td><td class = "left">N002 0 N001 0 </td><td class = "left"></td><td class = "left">G</td>
+<td class="left">value</td><td class="left">$g_{m XU1}$</td><td class="left">$0.04157$</td></tr>
+<tr><td class="left">Go_M1_XU1</td><td class = "left">N002 0 N002 0 </td><td class = "left"></td><td class = "left">g</td>
+<td class="left">value</td><td class="left">$g_{o XU1}$</td><td class="left">$0.0001562$</td></tr>
+<tr><td class="left">R1</td><td class = "left">N002 out </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$50$</td><td class="left">$50.0$</td></tr>
+<tr><td class="left">R2</td><td class = "left">out 0 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$50$</td><td class="left">$50.0$</td></tr>
+<tr><td class="left">V1</td><td class = "left">N003 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dc</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+</table>
+<table><caption>Table: Parameter definitions in 'Small Signal Dynamic Behaviour'.</caption>
+<tr><th class="left">Name</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">$CGBO_{N18}$</td><td class="left">$1.0 \cdot 10^{-12}$</td><td class="left">$1.0 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$CGBO_{P18}$</td><td class="left">$1.0 \cdot 10^{-12}$</td><td class="left">$1.0 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$CGSO_{N18}$</td><td class="left">$3.0 \cdot 10^{-10}$</td><td class="left">$3.0 \cdot 10^{-10}$</td></tr>
+<tr><td class="left">$CGSO_{P18}$</td><td class="left">$3.0 \cdot 10^{-10}$</td><td class="left">$3.0 \cdot 10^{-10}$</td></tr>
+<tr><td class="left">$CJB_{0 N18}$</td><td class="left">$0.001$</td><td class="left">$0.001$</td></tr>
+<tr><td class="left">$CJB_{0 P18}$</td><td class="left">$0.001$</td><td class="left">$0.001$</td></tr>
+<tr><td class="left">$C_{A}$</td><td class="left">$4.2 \cdot 10^{-12}$</td><td class="left">$4.2 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$C_{F}$</td><td class="left">$2.1 \cdot 10^{-12}$</td><td class="left">$2.1 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$C_{OX N18}$</td><td class="left">$\frac{\epsilon_{0} \epsilon_{SiO2}}{TOX_{N18}}$</td><td class="left">$0.008422$</td></tr>
+<tr><td class="left">$C_{OX P18}$</td><td class="left">$\frac{\epsilon_{0} \epsilon_{SiO2}}{TOX_{P18}}$</td><td class="left">$0.008422$</td></tr>
+<tr><td class="left">$E_{CRIT N18}$</td><td class="left">$5.6 \cdot 10^{6}$</td><td class="left">$5.6 \cdot 10^{6}$</td></tr>
+<tr><td class="left">$E_{CRIT P18}$</td><td class="left">$1.4 \cdot 10^{7}$</td><td class="left">$1.4 \cdot 10^{7}$</td></tr>
+<tr><td class="left">$ID$</td><td class="left">$0.005$</td><td class="left">$0.005$</td></tr>
+<tr><td class="left">$I_{0 N18}$</td><td class="left">$2 C_{OX N18} N_{s N18} U_{T}^{2} u_{0 N18}$</td><td class="left">$6.413 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$I_{0 P18}$</td><td class="left">$2 C_{OX P18} N_{s P18} U_{T}^{2} u_{0 P18}$</td><td class="left">$1.356 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$LDS_{N18}$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$LDS_{P18}$</td><td class="left">$1.8 \cdot 10^{-7}$</td><td class="left">$1.8 \cdot 10^{-7}$</td></tr>
+<tr><td class="left">$L_{N}$</td><td class="left">$1.6 \cdot 10^{-6}$</td><td class="left">$1.6 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$L_{P}$</td><td class="left">$1.6 \cdot 10^{-6}$</td><td class="left">$1.6 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$N_{s N18}$</td><td class="left">$1.35$</td><td class="left">$1.35$</td></tr>
+<tr><td class="left">$N_{s P18}$</td><td class="left">$1.35$</td><td class="left">$1.35$</td></tr>
+<tr><td class="left">$T$</td><td class="left">$300$</td><td class="left">$300.0$</td></tr>
+<tr><td class="left">$TOX_{N18}$</td><td class="left">$4.1 \cdot 10^{-9}$</td><td class="left">$4.1 \cdot 10^{-9}$</td></tr>
+<tr><td class="left">$TOX_{P18}$</td><td class="left">$4.1 \cdot 10^{-9}$</td><td class="left">$4.1 \cdot 10^{-9}$</td></tr>
+<tr><td class="left">$\Theta_{N18}$</td><td class="left">$0.28$</td><td class="left">$0.28$</td></tr>
+<tr><td class="left">$\Theta_{P18}$</td><td class="left">$0.35$</td><td class="left">$0.35$</td></tr>
+<tr><td class="left">$U_{T}$</td><td class="left">$\frac{T k}{q}$</td><td class="left">$0.02585$</td></tr>
+<tr><td class="left">$VAL_{N18}$</td><td class="left">$4.0 \cdot 10^{7}$</td><td class="left">$4.0 \cdot 10^{7}$</td></tr>
+<tr><td class="left">$VAL_{P18}$</td><td class="left">$4.0 \cdot 10^{7}$</td><td class="left">$4.0 \cdot 10^{7}$</td></tr>
+<tr><td class="left">$W_{N}$</td><td class="left">$0.00035$</td><td class="left">$0.00035$</td></tr>
+<tr><td class="left">$W_{P}$</td><td class="left">$0.0014$</td><td class="left">$0.0014$</td></tr>
+<tr><td class="left">$c$</td><td class="left">$2.998 \cdot 10^{8}$</td><td class="left">$2.998 \cdot 10^{8}$</td></tr>
+<tr><td class="left">$\epsilon_{0}$</td><td class="left">$\frac{1}{c^{2} \mu_{0}}$</td><td class="left">$8.854 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$\epsilon_{SiO2}$</td><td class="left">$3.9$</td><td class="left">$3.9$</td></tr>
+<tr><td class="left">$k$</td><td class="left">$1.381 \cdot 10^{-23}$</td><td class="left">$1.381 \cdot 10^{-23}$</td></tr>
+<tr><td class="left">$\mu_{0}$</td><td class="left">$4.0 \cdot 10^{-7} \pi$</td><td class="left">$1.257 \cdot 10^{-6}$</td></tr>
+<tr><td class="left">$q$</td><td class="left">$1.602 \cdot 10^{-19}$</td><td class="left">$1.602 \cdot 10^{-19}$</td></tr>
+<tr><td class="left">$u_{0 N18}$</td><td class="left">$0.0422$</td><td class="left">$0.0422$</td></tr>
+<tr><td class="left">$u_{0 P18}$</td><td class="left">$0.00892$</td><td class="left">$0.00892$</td></tr>
+<tr><td class="left">$IC_{CRIT N XU1}$</td><td class="left">$\frac{1}{16 N_{s N18}^{2} U_{T}^{2} \left(\Theta_{N18} + \frac{1}{E_{CRIT N18} L_{N}}\right)^{2}}$</td><td class="left">$334.6$</td></tr>
+<tr><td class="left">$IC_{CRIT P XU1}$</td><td class="left">$\frac{1}{16 N_{s P18}^{2} U_{T}^{2} \left(\Theta_{P18} + \frac{1}{E_{CRIT P18} L_{P}}\right)^{2}}$</td><td class="left">$329.5$</td></tr>
+<tr><td class="left">$IC_{N XU1}$</td><td class="left">$\frac{ID L_{N}}{I_{0 N18} W_{N}}$</td><td class="left">$35.64$</td></tr>
+<tr><td class="left">$IC_{P XU1}$</td><td class="left">$\frac{ID L_{P}}{I_{0 P18} W_{P}}$</td><td class="left">$42.15$</td></tr>
+<tr><td class="left">$c_{db XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W_{N} + CJB_{0 P18} LDS_{P18} W_{P}$</td><td class="left">$3.15 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">$c_{dg XU1}$</td><td class="left">$CGSO_{N18} W_{N} + CGSO_{P18} W_{P}$</td><td class="left">$5.25 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">$c_{gb XU1}$</td><td class="left">$2 CGBO_{N18} L_{N} + 2 CGBO_{P18} L_{P} + \frac{C_{OX N18} L_{N} W_{N} \left(N_{s N18} - 1\right)}{3 N_{s N18}} + \frac{C_{OX P18} L_{P} W_{P} \left(N_{s P18} - 1\right)}{3 N_{s P18}}$</td><td class="left">$2.038 \cdot 10^{-12}$</td></tr>
+<tr><td class="left">$c_{gs XU1}$</td><td class="left">$CGSO_{N18} W_{N} + CGSO_{N18} W_{P} + \frac{2 C_{OX N18} L_{N} W_{N}}{3} + \frac{2 C_{OX P18} L_{P} W_{P}}{3}$</td><td class="left">$1.625 \cdot 10^{-11}$</td></tr>
+<tr><td class="left">$c_{iss XU1}$</td><td class="left">$c_{dg XU1} + c_{gb XU1} + c_{gs XU1}$</td><td class="left">$1.881 \cdot 10^{-11}$</td></tr>
+<tr><td class="left">$c_{sb XU1}$</td><td class="left">$CJB_{0 N18} LDS_{N18} W_{N} + CJB_{0 P18} LDS_{P18} W_{P}$</td><td class="left">$3.15 \cdot 10^{-13}$</td></tr>
+<tr><td class="left">$f_{T PN XU1}$</td><td class="left">$\frac{g_{m XU1}}{2 \pi c_{iss XU1}}$</td><td class="left">$3.518 \cdot 10^{8}$</td></tr>
+<tr><td class="left">$g_{b XU1}$</td><td class="left">$g_{m N XU1} \left(N_{s N18} - 1\right) + g_{m P XU1} \left(N_{s P18} - 1\right)$</td><td class="left">$0.01455$</td></tr>
+<tr><td class="left">$g_{m N XU1}$</td><td class="left">$\frac{ID}{N_{s N18} U_{T} \sqrt{IC_{N XU1} \left(1 + \frac{IC_{N XU1}}{IC_{CRIT N XU1}}\right) + 0.5 \sqrt{IC_{N XU1} \left(1 + \frac{IC_{N XU1}}{IC_{CRIT N XU1}}\right)} + 1}}$</td><td class="left">$0.0217$</td></tr>
+<tr><td class="left">$g_{m P XU1}$</td><td class="left">$\frac{ID}{N_{s P18} U_{T} \sqrt{IC_{P XU1} \left(1 + \frac{IC_{P XU1}}{IC_{CRIT P XU1}}\right) + 0.5 \sqrt{IC_{P XU1} \left(1 + \frac{IC_{P XU1}}{IC_{CRIT P XU1}}\right)} + 1}}$</td><td class="left">$0.01987$</td></tr>
+<tr><td class="left">$g_{m XU1}$</td><td class="left">$g_{m N XU1} + g_{m P XU1}$</td><td class="left">$0.04157$</td></tr>
+<tr><td class="left">$g_{o XU1}$</td><td class="left">$\frac{ID}{L_{P} VAL_{P18}} + \frac{ID}{L_{N} VAL_{N18}}$</td><td class="left">$0.0001562$</td></tr>
+</table>
+<h2>Bode plots</h2>
+<figure><img src="img/dBmagZt.svg.svg" alt="" style="width:600px">
+</figure>
+<figure><img src="img/phaseZt.svg.svg" alt="" style="width:600px">
+</figure>
+<h2>Loop gain analysis</h2>
+<h2>PZ  analysis results</h2>
+<h3>Gain type: loopgain</h3>
+<p>DC gain = nan</p>
+<table><tr><th>pole</th><th>Re [Hz]</th><th>Im [Hz]</th><th>Mag [Hz]</th><th>Q</th></tr>
+<tr><td>p<sub>1</sub></td><td>-6.064e+8</td><td></td><td>6.064e+8</td><td></td></tr>
+</table>
+<table><tr><th>zero</th><th>Re [Hz]</th><th>Im [Hz]</th><th>Mag [Hz]</th><th>Q</th></tr>
+</table>
+<h2>Conclusion</h2>
+<p>We can conclude that the loop gain and the bandwidth are very low and therefore the requirements are not met.</p>
+<!-- INSERT --></ol>
+<div id="footnote">
+<p>Go to <a href="index.html">index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2020 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2020-12-08 18:05:51</p>
+</div></body></html>
