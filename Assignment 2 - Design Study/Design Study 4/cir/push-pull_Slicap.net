@@ -1,4 +1,4 @@
-* C:\Users\maboa\Desktop\Structured Electronic Design\Structured_Electronic_Design\Assignment 2 - Design Study\Design Study 4\cir\push-pull_Slicap.asc
+* C:\Users\Ossama El Boustani\Workspace\Reposititories\Structured_Electronic_Design\Assignment 2 - Design Study\Design Study 4\cir\push-pull_Slicap.asc
 C1 N001 N003 {C_A}
 V1 N003 0 V value=0 dc=0 dcvar=0 noise=0
 XU1 N002 N001 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID} W_P={W_P} L_P={L_P} ID_P={ID}
