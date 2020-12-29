@@ -1,0 +1,14 @@
+* C:\Users\Tom\OneDrive\Desktop\Assignments\Q2\Structured Eelectronic Design\Assignment3_reorganised\Assignment 3\Noise.asc
+XU1 N003 0 out NM18_noise ID={ID} IG=0 W={W} L={L}
+Ca N003 N002 {C_a}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+Cf N003 0 {C_f}
+E1 N002 0 N001 0 {L_A}
+.lib SLiCAP.lib
+* SPICE commands
+* Antenna model
+* Feedback network
+* Controller noise
+.lib SLiCAP.lib
+.backanno
+.end

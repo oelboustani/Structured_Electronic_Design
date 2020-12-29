@@ -1,0 +1,18 @@
+* C:\Users\Tom\OneDrive\Desktop\Assignments\Q2\Structured Eelectronic Design\Assignment3_reorganised\Assignment 3\DualStage.asc
+Ca in N004 {C_a}
+V1 N003 0 V value=0 dc=0 dcvar=0 noise=0
+E1 N004 0 N003 0 {L_A}
+Cf in N001 {C_f}
+R1 N001 out 50
+R2 out 0 50
+XU3 0 N002 in 0 CMOS18ND W=2.4m L=1u ID=12m
+XU1 N001 N002 0 0 CMOS18PN W_N=120u L_N=180n ID_N=1m W_P=440u L_P=180n ID_P=1m
+.lib SLiCAP.lib
+* Input stage
+* Antenna model
+* Output stage
+* Impedance matching
+* Load
+* SPICE commands
+.backanno
+.end
